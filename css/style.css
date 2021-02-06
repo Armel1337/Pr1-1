@@ -1,0 +1,230 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color:#1E90FF ;
+}
+
+.snowman{
+    display: inline;
+    align-items: center;
+}
+
+.snowman .hat{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin-right: -50%; 
+    left: 50%;
+    width: 80px;
+    border-bottom: 50px solid rgba(255, 20, 20, 0.9);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    top:110px;
+    z-index: 2;
+  
+}
+
+.head-ball{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
+    left: 50%;
+    top: 180px;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 12px black;
+    z-index: 1; 
+
+
+}
+.head-ball .eyes{
+    display: flex;
+    justify-content: space-between;
+    width: 55px;
+    position: relative;
+    left: 25%;
+    top: 30px;
+
+}
+
+.head-ball .eyes .eye{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+.head-ball .carrot{
+    width: 10px; 
+    height: 10px;
+    position: absolute;
+    top: 55px;
+    left: -20px;
+    border-top: 5px solid transparent;
+    border-right: 80px solid orange;
+    border-bottom: 10px solid transparent;
+}
+
+.head-ball .smile{
+ position: relative;
+ top: 50px;
+ left: 40%;
+ height: 50px;
+ width: 20px;
+ border-radius: 50px 0 0 50px;
+ border-top: 5px solid #000;
+ border-left: 5px solid #000;
+ border-bottom: 5px solid #000;
+ transform: rotate(-90deg);
+}
+
+.medium-ball{
+    position: absolute;
+    top:270px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
+    height: 160px;
+    width: 160px;
+    border-radius: 100%;
+    background-color:white; 
+    box-shadow: 2px 2px 10px black;
+   
+}
+
+ .left-hand{
+    position: absolute;
+    left:-70px;
+    top:35px;
+    width:100px ;
+    height:50px ;
+    background-color: white;
+    transform: rotate(180deg);
+      animation-name: left_hand_rotating;
+    animation-duration: 2s;
+        animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.finger {
+    position: absolute;
+    top: 40px;
+    margin-left: 60px;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    transform: rotate(0deg);
+}
+.small-funger-block {
+    position: absolute;
+    left: 80px;
+}
+.small-funger-block .small-finger{
+    height: 5px;
+    margin-top: 8px;
+    width: 20px;
+    background-color: black;
+}
+
+.broom{
+    background-image: url(../img/broom.png);
+    position: absolute;
+    top: -40px;
+    height: 400px;
+    width: 130px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: -3;
+
+}
+
+.right-hand{
+    position: absolute;    
+    left:130px;
+    top:35px;
+    transform: rotate(0deg);
+    width:100px ;
+    height:50px ;
+    background-color: white;
+    animation-name: right_hand_rotating;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.right-hand .finger{
+    top:-10px;
+}
+
+.botton1, .botton2, .botton3{
+    margin: 10px auto;
+    margin-top: 70px;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.botton2, .botton3{
+    margin: 15px auto;
+}
+
+.big-ball{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
+    top: 370px;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: #fff;
+    z-index: -1;
+    box-shadow: 2px 2px 10px black;
+}   
+ .field{
+    position:absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    background:yellow;
+    z-index: -2;
+    border-radius: 5% 5% 0 0;
+    box-shadow:  3px 3px 20px black;
+ }
+
+@keyframes left_hand_rotating{
+0%{
+    left: 35px;
+    transform-origin: left 50%;
+    transform: rotate(220deg);
+}
+50%{
+     left: 35px;
+    transform-origin: left 50%;
+    transform: rotate(150deg);
+}
+100%{
+     left: 35px;
+    transform-origin: left 50%;
+    transform: rotate(220deg);
+}
+}
+
+@keyframes right_hand_rotating{
+0%{
+    transform-origin: left 50%;
+    transform: rotate(-40deg);
+}
+50%{
+    transform-origin: left 50%;
+    transform: rotate(20deg);
+}
+100%{
+    transform-origin: left 50%;
+    transform: rotate(-40deg);
+}
+}
